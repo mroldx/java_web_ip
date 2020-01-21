@@ -10,7 +10,6 @@
     </parent>
     <groupId>com.ip</groupId>
     <artifactId>demo</artifactId>
-    <version></version>
     <packaging>jar</packaging>
     <name>demo</name>
     <description>Demo project for Spring Boot</description>
@@ -82,6 +81,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+        <finalName>demo</finalName>
     </build>
 
 </project>

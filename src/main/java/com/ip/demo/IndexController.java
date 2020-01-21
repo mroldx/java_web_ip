@@ -11,7 +11,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.Date;
 
 @Controller
 public class IndexController {
@@ -20,14 +19,7 @@ public class IndexController {
     private String city;
     @RequestMapping("/")
     public String index(HttpServletRequest request) {
-       user u=new user();
-        u.setLogin_time(new Date());
-     //   String ip=request.getRemoteAddr();
-        String ip = IPUtils.getIpAddress(request);
-        IpPojo ipPojo=httpURLGETCase(ip);
-        u.setLogin_city(ipPojo.getCountry()+ipPojo.getProvince()+ipPojo.getCity());
-        u.setIp(ip);
-        userMapper.add(u);
+
         return "index";
     }
 
